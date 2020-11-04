@@ -1,13 +1,13 @@
 import dataclasses
 from typing import List
-from domain.operation import Operation
-from domain.price import Price
+from Domain.Operation import Operation
+from Domain.PriceRange import PriceRange
 
 
 class PriceRangeOperations:
 
     @classmethod
-    def execute(cls, new_price: Price, current_prices: List[Price]) -> Operation:  # noqa
+    def execute(cls, new_price: PriceRange, current_prices: List[PriceRange]) -> Operation:  # noqa
 
         if not current_prices:
             result = Operation(to_create=[new_price])
@@ -34,7 +34,7 @@ class PriceRangeOperations:
         )
 
     @classmethod
-    def process_one_range(cls, new_price: Price, current_price: Price):
+    def process_one_range(cls, new_price: PriceRange, current_price: PriceRange):
         same_price = current_price.price == new_price.price
         same_range = new_price.same_range(current_price)
         new_price_is_wider = new_price.is_wider(current_price)

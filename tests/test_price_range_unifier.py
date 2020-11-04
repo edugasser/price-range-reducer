@@ -4,17 +4,17 @@ import dataclasses
 
 import pytest
 
-from price_range_unifier import PriceRangeUnifier
+from Application.price_range_unifier import PriceRangeUnifier
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from datetime import date, timedelta
-from domain.price import Price
+from Domain.PriceRange import PriceRange
 
 
 @pytest.fixture(scope="function")
 def price():
-    return Price(
+    return PriceRange(
         id=1,
         room="doble",
         rate="estandar",

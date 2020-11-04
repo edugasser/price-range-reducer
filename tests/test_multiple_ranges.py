@@ -6,13 +6,13 @@ import dataclasses
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from datetime import date, timedelta
-from domain.price import Price
-from price_range_operations import PriceRangeOperations
+from Domain.PriceRange import PriceRange
+from Application.price_range_operations import PriceRangeOperations
 
 
 @pytest.fixture(scope="function")
 def first():
-    return Price(
+    return PriceRange(
         id=1,
         room="doble",
         rate="estandar",
@@ -24,7 +24,7 @@ def first():
 
 @pytest.fixture(scope="function")
 def second():
-    return Price(
+    return PriceRange(
         id=1,
         room="doble",
         rate="estandar",
@@ -36,7 +36,7 @@ def second():
 
 @pytest.fixture(scope="function")
 def third():
-    return Price(
+    return PriceRange(
         id=1,
         room="doble",
         rate="estandar",
