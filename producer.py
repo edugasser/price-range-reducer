@@ -14,6 +14,3 @@ producer = KafkaProducer(
 
 p = EventPriceProducer(producer, PRICE_TOPIC)
 p.run()
-
-while True:
-    pass

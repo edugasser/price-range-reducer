@@ -15,4 +15,5 @@ RUN pip3 install -r req.txt
 
 COPY . /app
 
+# TODO: to change
 CMD [ "python", "app.py" ]
