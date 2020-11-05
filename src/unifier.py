@@ -3,8 +3,8 @@ import os
 from datetime import datetime
 from kafka import KafkaConsumer, KafkaProducer
 
-from Application.PriceRangeUnifier import PriceRangeUnifier
-from Domain.PriceRange import Price
+from src.Application.PriceRangeUnifier import PriceRangeUnifier
+from src.Domain.PriceRange import Price
 
 KAFKA_BROKER_URL = os.environ.get("KAFKA_BROKER_URL", "localhost:9092")
 PRICE_TOPIC = os.environ.get("PRICE_TOPIC", "queue.prices")

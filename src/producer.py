@@ -2,7 +2,7 @@ import json
 import os
 
 from kafka import KafkaProducer
-from Application.EventPriceProducer import EventPriceProducer
+from src.Application.EventPriceProducer import EventPriceProducer
 
 KAFKA_BROKER_URL = os.environ.get("KAFKA_BROKER_URL", "localhost:9092")
 PRICE_TOPIC = "queue.prices"

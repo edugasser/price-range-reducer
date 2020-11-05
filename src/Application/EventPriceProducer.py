@@ -2,9 +2,7 @@ import json
 import random
 from dataclasses import asdict
 from datetime import date, timedelta
-from Domain.PriceRange import Price
-
-from time import sleep
+from src.Domain.PriceRange import Price
 
 
 class EventPriceProducer(object):

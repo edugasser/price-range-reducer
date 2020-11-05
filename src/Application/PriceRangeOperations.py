@@ -1,7 +1,7 @@
 import dataclasses
 from typing import List
-from Domain.Operation import Operation
-from Domain.PriceRange import PriceRange
+from src.Domain.Operation import Operation
+from src.Domain.PriceRange import PriceRange
 
 
 class PriceRangeOperations:

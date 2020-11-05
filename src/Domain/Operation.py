@@ -1,8 +1,7 @@
-from datetime import date
 from dataclasses import dataclass
 from typing import List
 
-from Domain.PriceRange import PriceRange
+from src.Domain.PriceRange import PriceRange
 
 
 @dataclass
